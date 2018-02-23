@@ -38,6 +38,8 @@ header {
 	padding-bottom: 50px;
 	z-index: -2;
 	overflow: hidden;
+	position: relative;
+
 }
 
 #polymad {
@@ -67,13 +69,15 @@ header {
 /* Intro Div */
 
 #intro {
-	background-image: url('../images/intro_computer.png');
+	background-image: url('../images/intro-computer.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
 	padding-bottom: 20px;
 	margin-bottom: -20px;
+	box-shadow: 60px 60px 60px 60px white;
+
 }
 
 
@@ -94,6 +98,10 @@ p.terminal-text {
 	font-size: 18px;
 	padding-top: 10px;
 	margin-left: 10px;
+}
+
+.terminal-hover:hover {
+	background-color: blue;
 }
 
 .terminal-lead {
@@ -135,9 +143,6 @@ p.terminal-text {
 	width: 	100%;
 	overflow: hidden;
 	box-shadow: 100px 60px 60px 60px #00d2ff;
-	background-size: cover;
-	background-repeat: no-repeat;
-
 }
 
 #about-me {
@@ -146,8 +151,9 @@ p.terminal-text {
 canvas {
   position: absolute;
   width: 100%;
-  height: 100%;
+	min-height: 693px;
   background: #111a22;
+	overflow: hidden;
 }
 
 #mars-pic, #earth-pic {
@@ -162,7 +168,7 @@ canvas {
 #mars {
 	z-index: 5;
 	position: relative;
-	margin-bottom: -100px;
+	margin-bottom: -120px;
 }
 
 #earth {
@@ -178,8 +184,9 @@ canvas {
 
 #solar-container {
 	padding-top: 20px;
-	margin: 50px auto 0 auto;
+	margin: 0 auto 0 auto;
 	z-index: 4;
+
 }
 
 #solar-writing {
@@ -188,14 +195,27 @@ canvas {
 }
 
 .solar-text {
-	font-weight: 300;
-	font-size: 30px;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 45px;
+	margin-bottom: -70px;
+	z-index: 5
+}
+
+.solar-text-bottom {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 45px;
 	z-index: 5
 }
 
 .text-container {
 	background-color: rgba(5, 5, 5, 0.3);
-	max-width: 325px;
+	max-width: 500px;
+	min-width: 500px;
+	box-shadow: 2px 2px #00d2ff;
+	border-radius: 5px;
+	position: relative;
 }
 
 .background-shade::after {
@@ -217,3 +237,48 @@ canvas {
 
 
 /* End of My Story */
+
+/* Work History */
+
+.work-image {
+	position: relative;
+}
+
+#companies {
+	overflow: hidden;
+	position: relative;
+	box-shadow: 100px 60px 60px 60px #00d2ff;
+
+}
+
+#companies-container {
+	margin-top: 20px;
+	position: relative;
+}
+
+#pouredcontainer {
+	margin-top: 12px;
+}
+
+.image-container {
+	margin-bottom: 10px;
+
+}
+
+#work-ufo {
+	position: absolute;
+}
+
+#work-title {
+	position: relative;
+	margin: 350px auto 0 auto;
+	background-color: rgba(5, 5, 5, 0.3);
+	max-width: 300px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #00d2ff;
+	margin-bottom: 50px;
+
+
+}
+
+/* End of Work History */
