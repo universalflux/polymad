@@ -21,6 +21,49 @@
 
 	// Just For Fun. Enjoy finding new constellations ;-)
 
+	//JS for submitting the form.
+	$('#form-click').click(function() {
+		let firstName = $('#first-name').val();
+		$('#first-name').val("");
+		let lastName = $('#last-name').val();
+		$('#last-name').val("");
+		let email = $('#email').val();
+		$('#email').val("");
+		let phone = $('#phone').val();
+		$('#phone').val("");
+		let info = $('#info').val();
+		$('#info').val("");
+
+		let gotcha = {
+			firstName: firstName,
+			lastName: lastName,
+			email: email,
+			phone: phone,
+			info: info
+		};
+		console.log(gotcha);
+
+		$('#contact-container').fadeOut(function(){
+			$('#contact').html("<img id='rocket-fire' class='center-align' style='margin-top:150px;position:relative; max-width:500px; max-height: 400px;' src='images/rocket_poured.png'>");
+			$('#rocket-fire').hide();
+			$('#rocket-fire').fadeIn(function(){
+				$('#rocket-fire').animate({
+					left: '1600px',
+				}, 2000, function () {
+					$('#rocket-fire').hide();
+					$("#contact").html('<div style="margin-top: 120px; background-color: rgba(0, 0, 0, 0.5); border-radius: 5px; 	box-shadow: 2px 2px #00d2ff; padding: 3px" class="container center-align"><h3 id="message-sent" class="white-text">' + `Your message has been sent ${firstName}, we will talk soon. </h3></div>`);
+					$('#message-sent').hide();
+					$('#message-sent').fadeIn(function(){
+
+					})
+				});
+			});
+
+		});
+
+	});
+
+
 (function($){
 
   function generateStar(canvas, ctx, starRadius){
